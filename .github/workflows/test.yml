@@ -1,25 +1,16 @@
 name: "units-test"
 on:
   pull_request:
-  push:
-    branches:
-      - main
-      - 'releases/*'
+    types: [opened, reopened, synchronize]
 
 jobs:
-  # unit tests
-  units:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - run: npm ci
-    - run: npm test
-
-  # test action works running from the graph
   test:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - uses: ./
       with:
-        milliseconds: 1000
+        owner: ${{ github.repository_owner }}
+        repo: ${{ github.event.repository.name }}
+        pr_number: ${{ github.event.number }}
+        token: ${{ secrets.GITHUB_TOKEN }}
