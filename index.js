@@ -29,7 +29,7 @@ async function run() {
       return acc;
     }, diffData);
 
-    await octokit.rest.issues.createcomment({
+    await octokit.rest.issues.createComment({
       owner,
       repo,
       issue_number: pr_number,
