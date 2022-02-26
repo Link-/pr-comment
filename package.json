@@ -1,7 +1,7 @@
 {
-  "name": "javascript-action",
+  "name": "pr-comment",
   "version": "1.0.0",
-  "description": "JavaScript Action Template",
+  "description": "Adds PR changes as comment",
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
@@ -11,25 +11,27 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/actions/javascript-action.git"
+    "url": "git+https://github.com/Link-/pr-comment.git"
   },
   "keywords": [
     "GitHub",
     "Actions",
-    "JavaScript"
+    "JavaScript",
+    "Pull Request",
+    "Comment",
+    "Metadata"
   ],
-  "author": "",
+  "author": "Link-",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/actions/javascript-action/issues"
+    "url": "https://github.com/Link-/pr-comment/issues"
   },
-  "homepage": "https://github.com/actions/javascript-action#readme",
+  "homepage": "https://github.com/Link-/pr-comment#readme",
   "dependencies": {
     "@actions/core": "^1.2.5"
   },
   "devDependencies": {
     "@vercel/ncc": "^0.31.1",
-    "eslint": "^8.0.0",
-    "jest": "^27.2.5"
+    "eslint": "^8.0.0"
   }
 }
